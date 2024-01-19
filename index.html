@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Construct Core Works</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #282637;
+      color: #ffffff;
+      font-family: 'Exo 2', sans-serif;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+    }
+
+    #menu {
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(10px);
+      padding: 20px;
+      width: 220px;
+      position: fixed;
+      height: 100%;
+      overflow: auto;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-right: 20px;
+    }
+
+    #menu a {
+      display: flex;
+      align-items: center;
+      position: relative;
+      color: #ffffff;
+      padding: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 20px;
+      width: 90%;
+    }
+
+    #menu a i.menu-icon {
+      margin-right: 10px;
+      text-align: left;
+      top: 0px;
+      transition: color 0.3s ease;
+      width: 24px;
+      height: 24px;
+    }
+
+    #menu a span.menu-text {
+      text-align: left;
+    }
+
+    #menu a::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 6px;
+      border-radius: 20px;
+      background: linear-gradient(to right, #00ffae, #8c04fe);
+      transition: width 0.3s ease;
+    }
+
+    #menu a:hover::before {
+      width: 100%;
+    }
+
+    #top-logo img {
+      width: 600px;
+      padding: 50px;
+      max-height: 100%;
+      object-fit: cover;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    #content {
+      margin-left: 280px;
+      margin-top: 0px;
+      padding: 0px;
+      font-weight: normal;
+    }
+
+    .section-header {
+      font-size: 40px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding-right: 30px;
+      padding-left: 100px;
+    }
+
+    .header-icon {
+      margin-right: 0px;
+      font-size: 40px;
+      position: absolute;
+      left: 40px;
+      align-items: center;
+    }
+
+    .section-header::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 0px;
+      right: 0px;
+      bottom: -10px;
+      background: linear-gradient(to right, #00ffae, transparent);
+      z-index: -1;
+      border-radius: 20px;
+    }
+
+    #content p {
+      padding: 0px;
+      font-size: 20px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="menu">
+
+    <a href="#top">
+      <i class="fas fa-caret-square-up menu-icon"></i>
+      <span class="menu-text">Top</span>
+    </a>
+
+    <a href="#bio">
+      <i class="fas fa-user menu-icon"></i>
+      <span class="menu-text">Bio</span>
+    </a>
+    <a href="#commissions">
+      <i class="fas fa-paint-brush menu-icon"></i>
+      <span class="menu-text">Commissions</span>
+    </a>
+
+    <a href="#affiliate">
+      <i class="fas fa-handshake menu-icon"></i>
+      <span class="menu-text">Affiliate</span>
+    </a>
+
+    <a href="#shop">
+      <i class="fas fa-store menu-icon"></i>
+      <span class="menu-text">Shop</span>
+    </a>
+
+    <a href="#platforms">
+      <i class="fas fa-globe menu-icon"></i>
+      <span class="menu-text">Platforms</span>
+    </a>
+
+    <a href="#projects">
+      <i class="fas fa-box menu-icon"></i>
+      <span class="menu-text">Projects</span>
+    </a>
+  </div>
+
+  <div id="content">
+
+    <section id="top-logo">
+      <div class="top-logo">
+        <img src="https://i.ibb.co/HF1mwrf/Title.png" alt="Title" id="titleImage" />
+        <i class="top-logo"></i>
+      </div>
+    </section>
+
+    <section id="bio">
+      <div class="section-header"><i class="fas fa-user header-icon"></i>Bio</div>
+      <p>About digital artwork...</p>
+    </section>
+
+    <section id="commissions">
+      <div class="section-header"><i class="fas fa-paint-brush header-icon"></i>Commissions</div>
+      <p>About digital artwork...</p>
+    </section>
+
+    <section id="affiliate">
+      <div class="section-header"><i class="fas fa-handshake header-icon"></i>Affiliate</div>
+      <p>About digital artwork...</p>
+    </section>
+
+    <section id="shop">
+      <div class="section-header"><i class="fas fa-store header-icon"></i>Shop</div>
+      <p>About digital artwork...</p>
+    </section>
+
+    <section id="platforms">
+      <div class="section-header"><i class="fas fa-globe header-icon"></i>Platforms</div>
+      <p>TouchBox is a little project me and a friend came up with to see if purchasing a Hitbox controller was a good idea! At first we would be practicing with a piece of paper with drawn-on circles, however it would have been nice to get some physical and visual feedback. This is a coding project using HTML (made with Codepen.io) designed to help you build muscle memory to see if getting that real life Hitbox is worth the money for you!
+
+        Instructions:
+
+        First off you'll need a touch screen device. Phone/tablet/2in1 laptop is fine. Tap the menu ☰ and make it full screen! Now you're ready to go.
+
+        Seems to work:
+
+        Vibration Toggle
+
+        Last-Pressed Button
+
+        Selecting Button Color
+
+        Uploading Background Image
+
+        Full Screen Toggle
+
+        Sound plays sorta
+
+        Bugs:
+
+        Changing button colors works, but button presses stop working
+
+        Sound isn't perfect, working on that
+
+        Future Ideas:
+
+        Actual nice images for input display, instead of emoji and regular text
+
+        Would be awesome if this could be used as an actual input so you can truly practice with it!
+
+        Update Log:
+
+        1.0: Current Version, will update with changes as they come</p>
+    </section>
+
+    <section id="projects">
+      <div class="section-header"><i class="fas fa-box header-icon"></i>Projects</div>
+      <p>About digital artwork...</p>
+    </section>
+  </div>
+
+</body>
+
+</html>
