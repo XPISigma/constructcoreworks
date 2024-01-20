@@ -50,6 +50,8 @@
       color: #fff;
       margin: 0 10px;
       font-size: 24px;
+      transform: translateY(-20px);
+      animation: fadeIn 1s ease-out forwards;
     }
 
     .link-container {
@@ -94,14 +96,18 @@
 
     /* Top Logo */
     .responsive-iframe-wrapper {
-
-      
+      opacity: 0;
+      /* Set initial opacity to 0 */
+      transform: translateY(-20px);
+      /* Move modules up by 20px initially */
+      animation: fadeIn 1s ease-out forwards;
+      /* Use fadeIn animation */
     }
 
     .responsive-iframe {
-    width: 70%;
-    height: 40vh;
-    border: none;
+      width: 70%;
+      height: 40vh;
+      border: none;
     }
 
     .module {
@@ -118,6 +124,24 @@
       z-index: 1;
       /* Ensure modules are on top */
       margin-right: 10px;
+      opacity: 0;
+      /* Set initial opacity to 0 */
+      transform: translateY(-20px);
+      /* Move modules up by 20px initially */
+      animation: fadeIn 1s ease-out forwards;
+      /* Use fadeIn animation */
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     h2 {
