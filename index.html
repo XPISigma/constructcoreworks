@@ -33,6 +33,7 @@
     .module {
       width: calc(33.33% - 10px);
       margin: 0px;
+      opacity: 0;
     }
 
     .social-icons {
@@ -43,15 +44,18 @@
       padding: 5%;
       background-color: transparent;
       z-index: 2;
+      
     }
 
     .social-icons a {
+      opacity: 0;
       text-decoration: none;
       color: #fff;
       margin: 0 10px;
       font-size: 24px;
       transform: translateY(-20px);
       animation: fadeIn 1s ease-out forwards;
+         animation-delay: 1s;
     }
 
     .link {
@@ -110,6 +114,7 @@
       margin-right: 10px;
       transform: translateY(-20px);
       animation: fadeIn 1s ease-out forwards;
+      animation-delay: 2s;
     }
 
     @keyframes fadeIn {
