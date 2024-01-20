@@ -4,249 +4,207 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Construct Core Works</title>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="...">
 
   <style>
     body {
-      background-color: #282637;
-      color: #ffffff;
-      font-family: 'Exo 2', sans-serif;
-      font-weight: bold;
-      margin: 0;
-      padding: 0;
+      user-select: none;
+      font-family: 'EXO 2', sans-serif;
+      background: url('https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=2222&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat fixed;
+      text-align: center;
     }
 
-    #menu {
-      background: rgba(0, 0, 0, 0.7);
-      backdrop-filter: blur(10px);
-      padding: 20px;
-      width: 220px;
-      position: fixed;
-      height: 100%;
-      overflow: auto;
-      text-align: left;
+    body::-webkit-scrollbar {
+      display: none;
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .module {
+      width: calc(33.33% - 10px);
+      margin: 10px;
+    }
+
+    .social-icons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 5%;
+      background-color: transparent;
+      z-index: 2;
+    }
+
+    .social-icons a {
+      text-decoration: none;
+      color: #fff;
+      margin: 0 10px;
+      font-size: 24px;
+    }
+
+    .link-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 0px;
+      flex: 1;
+      position: relative;
+      z-index: 1;
+      margin-top: 60px;
+    }
+
+    .link {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: bold;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
-      margin-right: 20px;
+      align-items: center;
+      justify-content: center;
+      width: 100px;
+      height: 65px;
+      transition: all 0.3s ease;
+      border-radius: 12px;
     }
 
-    #menu a {
-      display: flex;
-      align-items: center;
-      position: relative;
-      color: #ffffff;
+    .link i {
+      font-size: 28px;
+      margin-bottom: 5px;
+    }
+
+    .link-text {
+      font-size: 12px;
+    }
+
+    .link:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 10px rgba(72, 209, 204, 0.8);
+    }
+/* Top Logo */
+  .responsive-iframe-wrapper {
+    width: 100%;
+    overflow: show;
+  }
+
+  .responsive-iframe {
+    position: center;
+    top: 0;
+    left: 0;
+    width: 75%;
+    max-height: 70%;
+    overflow: show;
+  }
+
+    .module {
+      width: 400px;
+      height: 300px;
+      border-radius: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(10px);
+      margin: 10px;
       padding: 10px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 20px;
-      width: 90%;
-    }
-
-    #menu a i.menu-icon {
+      text-align: center;
+      color: #fff;
+      /* Set text color to white */
+      z-index: 1;
+      /* Ensure modules are on top */
       margin-right: 10px;
-      text-align: left;
-      top: 0px;
-      transition: color 0.3s ease;
-      width: 24px;
-      height: 24px;
     }
 
-    #menu a span.menu-text {
-      text-align: left;
-    }
-
-    #menu a::before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 6px;
-      border-radius: 20px;
-      background: linear-gradient(to right, #00ffae, #8c04fe);
-      transition: width 0.3s ease;
-    }
-
-    #menu a:hover::before {
-      width: 100%;
-    }
-
-    #top-logo img {
-      width: 600px;
-      padding: 50px;
-      max-height: 100%;
-      object-fit: cover;
-      position: relative;
-      display: flex;
-      align-items: center;
-    }
-
-    #content {
-      margin-left: 280px;
-      margin-top: 0px;
-      padding: 0px;
-      font-weight: normal;
-    }
-
-    .section-header {
-      font-size: 40px;
+    h2 {
       font-weight: bold;
-      margin-bottom: 30px;
-      position: relative;
-      display: flex;
-      align-items: center;
-      padding-right: 30px;
-      padding-left: 100px;
     }
 
-    .header-icon {
-      margin-right: 0px;
-      font-size: 40px;
-      position: absolute;
-      left: 40px;
-      align-items: center;
+    p {
+      color: #fff;
     }
 
-    .section-header::before {
-      content: '';
-      position: absolute;
-      top: -10px;
-      left: 0px;
-      right: 0px;
-      bottom: -10px;
-      background: linear-gradient(to right, #00ffae, transparent);
-      z-index: -1;
-      border-radius: 20px;
+    a {
+      color: #fff;
     }
 
-    #content p {
-      padding: 0px;
-      font-size: 20px;
-    }
+    @media only screen and (max-width: 600px) {
+      .link {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 0px;
+        margin-top: 0px
+      }
 
-    html {
-      scroll-behavior: smooth;
+      .link i {
+        font-size: 25px;
+        margin-bottom: 0px;
+        margin-top: 3px
+      }
+
+      .link-text {
+        display: none;
+      }
+
+      .link-container {
+        font-size: 0px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <div id="menu">
+<div class="responsive-iframe-wrapper">
+  <iframe class="responsive-iframe" src="https://XPISigma.github.io/constructcoreworks/cclogo.html" frameborder="0" scrolling="no" overflow="show"></iframe>
+</div>
 
-    <a href="#top">
-      <i class="fas fa-caret-square-up menu-icon"></i>
-      <span class="menu-text">Top</span>
-    </a>
 
-    <a href="#bio">
-      <i class="fas fa-user menu-icon"></i>
-      <span class="menu-text">Bio</span>
-    </a>
-    <a href="#commissions">
-      <i class="fas fa-paint-brush menu-icon"></i>
-      <span class="menu-text">Commissions</span>
-    </a>
-
-    <a href="#affiliate">
-      <i class="fas fa-handshake menu-icon"></i>
-      <span class="menu-text">Affiliate</span>
-    </a>
-
-    <a href="#shop">
-      <i class="fas fa-store menu-icon"></i>
-      <span class="menu-text">Shop</span>
-    </a>
-
-    <a href="#platforms">
-      <i class="fas fa-globe menu-icon"></i>
-      <span class="menu-text">Platforms</span>
-    </a>
-
-    <a href="#projects">
-      <i class="fas fa-box menu-icon"></i>
-      <span class="menu-text">Projects</span>
-    </a>
+  <div class="social-icons">
+    <a href="https://twitter.com/XPISigmaArt" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.instagram.com/xpisigma_art/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://youtube.com/xpisigmaart" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="https://www.tiktok.com/@xpisigmaart" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://picarto.tv/XPISigmaArt" target="_blank"><i class="fas fa-tv"></i></a>
+    <a href="https://www.twitch.tv/xpisigmaart" target="_blank"><i class="fab fa-twitch"></i></a>
+    <a href="https://xpisigmaart.newgrounds.com" target="_blank"><i class="fa-solid fa-bomb"></i></a>
+    <a href="https://www.patreon.com/XPISigmaArt" target="_blank"><i class="fab fa-patreon"></i></a>
+    <a href="https://ko-fi.com/xpisigma" target="_blank"><i class="fas fa-coffee"></i></a>
   </div>
 
-  <div id="content">
-
-    <section id="top-logo">
-      <div class="top-logo">
-        <img src="https://i.ibb.co/HF1mwrf/Title.png" alt="Title" id="titleImage" />
-        <i class="top-logo"></i>
-      </div>
-    </section>
-
-    <section id="bio">
-      <div class="section-header"><i class="fas fa-user header-icon"></i>Bio</div>
-      <p>About digital artwork...</p>
-    </section>
-
-    <section id="commissions">
-      <div class="section-header"><i class="fas fa-paint-brush header-icon"></i>Commissions</div>
-      <p>About digital artwork...</p>
-    </section>
-
-    <section id="affiliate">
-      <div class="section-header"><i class="fas fa-handshake header-icon"></i>Affiliate</div>
-      <p>About digital artwork...</p>
-    </section>
-
-    <section id="shop">
-      <div class="section-header"><i class="fas fa-store header-icon"></i>Shop</div>
-      <p>About digital artwork...</p>
-    </section>
-
-    <section id="platforms">
-      <div class="section-header"><i class="fas fa-globe header-icon"></i>Platforms</div>
-      <p>TouchBox is a little project me and a friend came up with to see if purchasing a Hitbox controller was a good idea! At first we would be practicing with a piece of paper with drawn-on circles, however it would have been nice to get some physical and visual feedback. This is a coding project using HTML (made with Codepen.io) designed to help you build muscle memory to see if getting that real life Hitbox is worth the money for you!
-
-        Instructions:
-
-        First off you'll need a touch screen device. Phone/tablet/2in1 laptop is fine. Tap the menu ☰ and make it full screen! Now you're ready to go.
-
-        Seems to work:
-
-        Vibration Toggle
-
-        Last-Pressed Button
-
-        Selecting Button Color
-
-        Uploading Background Image
-
-        Full Screen Toggle
-
-        Sound plays sorta
-
-        Bugs:
-
-        Changing button colors works, but button presses stop working
-
-        Sound isn't perfect, working on that
-
-        Future Ideas:
-
-        Actual nice images for input display, instead of emoji and regular text
-
-        Would be awesome if this could be used as an actual input so you can truly practice with it!
-
-        Update Log:
-
-        1.0: Current Version, will update with changes as they come</p>
-    </section>
-
-    <section id="projects">
-      <div class="section-header"><i class="fas fa-box header-icon"></i>Projects</div>
-      <p>About digital artwork...</p>
-    </section>
+  <div class="link-container">
+    <!-- Your existing links go here -->
   </div>
 
+  <section>
+    <div class="module" id="commission">
+      <h2>Commission Information</h2>
+      <p>Include details about your commission services.</p>
+      <a href="#commission-order">Order Now</a>
+    </div>
+
+    <div class="module" id="shop">
+      <h2>Shop Information</h2>
+      <p>Provide an overview of your shop, products, and promotions.</p>
+      <a href="#visit-shop">Visit Shop</a>
+    </div>
+
+    <div class="module" id="social-media">
+      <h2>Connect with Us</h2>
+      <p>Follow us for updates!</p>
+    </div>
+
+    <div class="module" id="section-template">
+      <h2>Section Template</h2>
+      <p>Section contents.</p>
+    </div>
+  </section>
 </body>
 
 </html>
