@@ -4,6 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxanium:wght@800&display=swap">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300&display=swap">
+
   <link rel="icon" href="path/to/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" sizes="180x180" href="path/to/apple-touch-icon.png">
   <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
@@ -11,8 +15,24 @@
 
   <style>
     body {
+      /* Hide the default scrollbar */
+      scrollbar-width: thin;
+      scrollbar-color: transparent transparent;
+
+      /* Firefox */
+      /* Webkit (Chrome, Safari) */
+      ::-webkit-scrollbar {
+        width: 3px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: transparent;
+      }
+
       user-select: none;
-      font-family: 'EXO 2', sans-serif;
+      font-family: 'Oxanium',
+      sans-serif;
+      font-weight: 300;
       background: url('https://i.ibb.co/p0TpMwV/bgthingcc-moshed-01-20-21-16-18.png" alt="bgthingcc') top/cover repeat fixed !important;
       background-size: 100vh cover !important;
       background-attachment: fixed !important;
@@ -31,7 +51,7 @@
     section {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-around;
+      justify-content: center;
       align-items: stretch;
       padding: 10px;
     }
@@ -41,7 +61,6 @@
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      padding: 5%;
       background-color: transparent;
       z-index: 2;
       top: -20px;
@@ -50,7 +69,7 @@
     .social-icons a {
       text-decoration: none;
       color: #fff;
-      margin: 0 10px;
+      margin: 10px;
       font-size: 24px;
       transform: translateY(-20px);
       transition: transform 0.3s ease;
@@ -66,7 +85,6 @@
 
     .social-icons a:hover::after {
       content: attr(data-id);
-      /* Show the data-id attribute as content */
       position: absolute;
       top: -200%;
       left: 50%;
@@ -78,7 +96,6 @@
       white-space: nowrap;
       opacity: 0;
       transition: opacity 0.3s ease;
-      font-family: 'Exo 2', sans-serif;
       font-weight: bold;
       border-radius: 20px;
       background-color: rgba(0, 0, 0, 0.5);
@@ -145,18 +162,34 @@
     }
 
     #footer {
-      width: 100%;
-      height: 10%;
-      color: white;
-      text-align: center;
+      opacity: 0;
+      width: 90%;
+      min-height: 80px;
+      border-radius: 20px;
+      background-color: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(3px);
+      margin: 10px;
       padding: 10px;
+      text-align: center;
+      color: #fff;
+      z-index: 1;
+      transform: translateY(-20px);
+      animation: fadeIn 1s ease forwards;
+      outline: 2px solid rgba(255, 255, 255, 0);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+      transition: box-shadow 0.3s ease, outline 0.3s ease;
+    }
+
+    #footer:hover {
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+      outline: 2px solid rgba(255, 255, 255, 1);
     }
 
     .module {
       width: calc(33.33% - 10px);
       opacity: 0;
       width: 400px;
-      min-height: 60px;
+      min-height: 400px;
       border-radius: 20px;
       background-color: rgba(0, 0, 0, 0.5);
       backdrop-filter: blur(3px);
@@ -214,7 +247,6 @@
     }
 
     h2 {
-      font-weight: bold;
       font-size: 30px;
       text-align: left;
     }
@@ -324,22 +356,47 @@
       margin: 0;
     }
 
-    .logo {
-      width: 100px;
-      height: auto;
-      margin-bottom: 10px;
-      text-align: center;
+    #scroll-indicator {
+      position: fixed;
+      top: 5px;
+      right: 7px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 26px;
+      color: #fff;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+    }
+
+    #scroll-indicator.hidden {
+      opacity: 0;
+    }
+
+    #up-arrow {
+      display: none;
+    }
+
+    body.scrollable #up-arrow {
+      display: block;
+    }
+
+    body.scrollable #down-arrow {
+      display: block;
+    }
+
+    body.at-bottom #up-arrow,
+    body:not(.scrollable) #down-arrow {
+      display: none;
     }
   </style>
-
 </head>
 
 <body>
-
   <div class="responsive-iframe-wrapper">
     <iframe class="responsive-iframe" src="https://XPISigma.github.io/constructcoreworks/cclogo.html" frameborder="0" scrolling="no" overflow="show"></iframe>
   </div>
-
   <div class="social-icons">
     <a href="https://twitter.com/XPISigmaArt" target="_blank" data-id="Twitter"><i class="fab fa-twitter"></i></a>
     <a href="https://www.instagram.com/xpisigma_art/" target="_blank" data-id="Instagram"><i class="fab fa-instagram"></i></a>
@@ -425,13 +482,41 @@
         <p>Hey there. I'm XPI Sigma, a digital artist in the USA who loves drawing vibrant pinups. I'm very interested in technology as well, so you'll catch me doing hardware reviews on the side as well as delve into game development using the name Construct Core Works, (and previously Chrome Cloak Games). Thanks for joining me on my art journey!</p>
       </div>
     </div>
-    <div class="module" id="footer">
+
+    <div class="footer" id="footer">
       <h2></h2>
       <p>Contact me for business inquiries (or if the site is broken) at <a href="mailto:XPISigmaArt@gmail.com">XPISigmaArt@gmail.com</a></p>
     </div>
-
+    <div id="scroll-indicator" class="hidden">
+      <span id="up-arrow">&#9650;</span>
+      <span id="down-arrow">&#9660;</span>
+    </div>
   </section>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const scrollIndicator = document.getElementById("scroll-indicator");
+
+      function updateScrollIndicator() {
+        const isScrollable = document.body.scrollHeight > window.innerHeight;
+        const isAtTop = window.scrollY === 0;
+        const isAtBottom = window.innerHeight + window.scrollY >= document.body.scrollHeight;
+        document.body.classList.toggle("scrollable", isScrollable);
+        document.body.classList.toggle("at-bottom", isAtBottom);
+        scrollIndicator.classList.toggle("hidden", !isScrollable);
+        const upArrow = document.getElementById("up-arrow");
+        const downArrow = document.getElementById("down-arrow");
+        if (isScrollable) {
+          upArrow.style.display = isAtTop ? "none" : "block";
+          downArrow.style.display = isAtBottom ? "none" : "block";
+        }
+      }
+      document.addEventListener("scroll", updateScrollIndicator);
+      window.addEventListener("resize", updateScrollIndicator);
+      // Initial update
+      updateScrollIndicator();
+    });
+  </script>
 </body>
 
 </html>
