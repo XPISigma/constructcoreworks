@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="path/to/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="path/to/apple-touch-icon.png">
   <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="...">
 
@@ -16,6 +18,7 @@
       background-attachment: fixed !important;
       text-align: center;
       background-position: top;
+      font-size: 17px;
     }
 
     body::-webkit-scrollbar {
@@ -149,7 +152,7 @@
       transform: translateY(-20px);
       animation: fadeIn 1s ease forwards;
       outline: 2px solid rgba(255, 255, 255, 0);
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
       transition: box-shadow 0.3s ease, outline 0.3s ease;
     }
 
@@ -196,6 +199,11 @@
 
     h2 {
       font-weight: bold;
+      font-size: 30px;
+    }
+    h1 {
+      font-weight: bold;
+      font-size: 20px;
     }
 
     p {
@@ -236,6 +244,7 @@
       font-weight: bold;
       transition: transform 0.3s ease;
       text-align: center;
+      margin-right: 6px;
     }
 
     .order-button:hover {
@@ -255,6 +264,7 @@
       padding-left: 10px;
       padding-right: 10px;
       text-align: left;
+      align-items: center;
     }
 
     .image-container {
@@ -276,8 +286,26 @@
       align-items: center;
     }
 
+    .logo {
+  width: 70px; /* Set the width to 70px */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px; /* Optional margin for spacing */
+}
+
+h2 {
+  text-align: left;
+  margin-top: 0;
+}
+    
     .image-container h2 {
       margin: 0;
+    }
+
+    .logo {
+      width: 100px;
+      height: auto;
+      margin-bottom: 10px;
+text-align: center;
     }
   </style>
 
@@ -307,42 +335,60 @@
         <h2>Commission Information</h2>
       </div>
       <div class="text-container">
+        <h1>Standard Commissions</h1>
         <p>Regular commissions are comprised of full colors, sketch colors, both coming in thigh up and full body. Please fill out the form if you're interested!</p>
 
         <a href="https://www.google.com" class="order-button">Commission Request Form</a>
-
+        <h1>Sketch Commissions</h1>
         <p>For thigh up sketch commissions, you can head to my Ko-Fi page and order there.</p>
 
         <a href="https://www.google.com" class="order-button">Ko-Fi Commissions</a>
+        <h1>Contact Me</h1>
         <p>Any questions, please contact me on X/Twitter, or email me.</p>
 
         <a href="mailto:XPISigmaArt@gmail.com" class="order-button">Email Me</a>
         <p></p>
       </div>
     </div>
-    <div class="module" id="template">
+    <div class="module" id="shop">
       <div class="image-container">
-        <h2>Commission Information</h2>
+        <h2>Shop</h2>
       </div>
       <div class="text-container">
-        <p>Include details about your commission services.</p>
+        <h1>Personal Shop</h1>
+        <p>Check out my latest temporary items here. This includes stickers, magnets, and sometimes more!</p>
 
-        <a href="https://www.google.com" class="order-button">Order Here</a>
-
-        <p>Include details about your commission services.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf4uHFY7ay-Gy9i1i2p_KkbfHC9Ts6BKDGME499ckqZluQgSg/viewform" class="order-button">Order Form</a>
+        <h1>External Shops</h1>
+        <p>Or you can check out my other storefronts! More stickers, shirts, and more stuff.</p>
+        <a href="https://www.redbubble.com/people/XPISigma/shop" class="order-button">RedBubble</a> <a href="https://www.teepublic.com/user/xpisigma" class="order-button">TeeSpring</a>
         <p></p>
       </div>
     </div>
-    <div class="module" id="template2">
+    <div class="module" id="gamedev">
       <div class="image-container">
-        <h2>Commission Information</h2>
+        <h2>Game Development</h2>
       </div>
       <div class="text-container">
-        <p>Include details about your commission services.</p>
+        <h1>Itch.io</h1>
+        <p>I haven't worked on a project in a while, but please feel free to check out my itch.io page! My goals are to learn GODOT4, and start working on a dream project of mine.</p>
 
-        <a href="https://www.google.com" class="order-button">Order Here</a>
+        <a href="https://chrome-cloak-games.itch.io/" class="order-button">Itch.io Game Page</a>
+        <p></p>
+        <p></p>
+      </div>
+    </div>
 
-        <p>If you have any </p>
+    <div class="module" id="projects">
+      <div class="image-container">
+        <h2>Projects</h2>
+      </div>
+      <div class="text-container">
+        <h1>TouchBox</h1>
+        <p>A hitbox fighting game controller for touchscreens. You can't use it to play, but you can use it to gain muscle memory in case you wanted to buy a real life hitbox!</p>
+
+        <a href="https://xpisigma.github.io/TouchBox/" class="order-button">TouchBox</a>
+        <p></p>
         <p></p>
       </div>
     </div>
@@ -351,8 +397,9 @@
       <div class="image-container">
         <h2>Bio</h2>
       </div>
+
       <div class="text-container">
-        <p>Bio text here.</p>
+        <p>Hey there. I'm XPI Sigma, a digital artist in the USA who loves drawing vibrant pinups. I'm very interested in technology as well, so you'll catch me doing hardware reviews on the side as well as delve into game development using the name Construct Core Works, (and previously Chrome Cloak Games). Thanks for joining me on my art journey!</p>
       </div>
     </div>
     <div class="module" id="footer">
