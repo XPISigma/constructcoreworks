@@ -29,10 +29,9 @@
     section {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
+      justify-content: space-around;
+      align-items: stretch;
       padding: 10px;
-      flex: 1;
     }
 
     .social-icons {
@@ -46,14 +45,42 @@
     }
 
     .social-icons a {
-      opacity: 0;
       text-decoration: none;
       color: #fff;
       margin: 0 10px;
       font-size: 24px;
       transform: translateY(-20px);
-      animation: fadeIn 1s ease-out forwards;
-      animation-delay: 1s;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #15fbb2;
+      transform: translateY(-30px) scale(1.1);
+    }
+
+    .social-icons a:hover::after {
+      content: attr(data-id);
+      /* Show the data-id attribute as content */
+      position: absolute;
+      top: -200%;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      font-size: 12px;
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      font-family: 'Exo 2', sans-serif;
+      font-weight: bold;
+      border-radius: 20px;
+      background-color: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(1px);
+    }
+
+    .social-icons a:hover::after {
+      opacity: 1;
     }
 
     .link {
@@ -108,10 +135,9 @@
 
     .module {
       width: calc(33.33% - 10px);
-      margin: 0px;
       opacity: 0;
       width: 400px;
-      height: 300px;
+      min-height: 60px;
       border-radius: 20px;
       background-color: rgba(0, 0, 0, 0.5);
       backdrop-filter: blur(6px);
@@ -120,7 +146,6 @@
       text-align: center;
       color: #fff;
       z-index: 1;
-      margin-right: 10px;
       transform: translateY(-20px);
       animation: fadeIn 1s ease-out forwards;
     }
@@ -201,15 +226,46 @@
       text-decoration: none;
       transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
       font-weight: bold;
+      transition: transform 0.3s ease;
     }
 
     .order-button:hover {
       background-color: #02e8c3;
-
+      transform: scale(1.1);
       color: #ffffff;
+    }
 
+    #commission {
+      position: relative;
+    }
+
+    .text-container {
+      position: relative;
+      padding-top: 22%;
+    }
+
+    .image-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      z-index: -1;
+      background-image: url('data:image/jpeg;base64,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');
+      background-size: cover;
+      background-position: center;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .image-container h2 {
+      margin: 0;
     }
   </style>
+
 </head>
 
 <body>
@@ -220,48 +276,78 @@
   </div>
 
   <div class="social-icons">
-    <a href="https://twitter.com/XPISigmaArt" target="_blank"><i class="fab fa-twitter"></i></a>
-    <a href="https://www.instagram.com/xpisigma_art/" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://youtube.com/xpisigmaart" target="_blank"><i class="fab fa-youtube"></i></a>
-    <a href="https://www.tiktok.com/@xpisigmaart" target="_blank"><i class="fab fa-tiktok"></i></a>
-    <a href="https://picarto.tv/XPISigmaArt" target="_blank"><i class="fas fa-tv"></i></a>
-    <a href="https://www.twitch.tv/xpisigmaart" target="_blank"><i class="fab fa-twitch"></i></a>
-    <a href="https://xpisigmaart.newgrounds.com" target="_blank"><i class="fa-solid fa-bomb"></i></a>
-    <a href="https://www.patreon.com/XPISigmaArt" target="_blank"><i class="fab fa-patreon"></i></a>
-    <a href="https://ko-fi.com/xpisigma" target="_blank"><i class="fas fa-coffee"></i></a>
+    <a href="https://twitter.com/XPISigmaArt" target="_blank" data-id="Twitter"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.instagram.com/xpisigma_art/" target="_blank" data-id="Instagram"><i
+        class="fab fa-instagram"></i></a>
+    <a href="https://youtube.com/xpisigmaart" target="_blank" data-id="YouTube"><i class="fab fa-youtube"></i></a>
+    <a href="https://www.tiktok.com/@xpisigmaart" target="_blank" data-id="TikTok"><i class="fab fa-tiktok"></i></a>
+    <a href="https://picarto.tv/XPISigmaArt" target="_blank" data-id="Picarto"><i class="fas fa-tv"></i></a>
+    <a href="https://www.twitch.tv/xpisigmaart" target="_blank" data-id="TwitchTV"><i class="fab fa-twitch"></i></a>
+    <a href="https://xpisigmaart.newgrounds.com" target="_blank" data-id="Newgrounds"><i
+        class="fa-solid fa-bomb"></i></a>
+    <a href="https://www.patreon.com/XPISigmaArt" target="_blank" data-id="Patreon"><i class="fab fa-patreon"></i></a>
+    <a href="https://ko-fi.com/xpisigma" target="_blank" data-id="Ko-Fi"><i class="fas fa-coffee"></i></a>
   </div>
 
   <section>
     <div class="module" id="commission">
-      <h2>Commission Information</h2>
-      <p>Include details about your commission services.</p>
-      <a href="https://www.google.com" class="order-button">Order Here</a>
+      <div class="image-container">
+        <h2>Commission Information</h2>
+      </div>
+      <div class="text-container">
+        <p>Include details about your commission services.</p>
+
+        <a href="https://www.google.com" class="order-button">Order Here</a>
+
+        <p>Include details about your commission services.</p>
+
+        <a href="https://www.google.com" class="order-button">Order Here</a>
+        <p>Include details about your commission services.</p>
+
+        <a href="https://www.google.com" class="order-button">Order Here</a>
+        <p></p>
+      </div>
+    </div>
+    <div class="module" id="template">
+      <div class="image-container">
+        <h2>Commission Information</h2>
+      </div>
+      <div class="text-container">
+        <p>Include details about your commission services.</p>
+
+        <a href="https://www.google.com" class="order-button">Order Here</a>
+
+        <p>Include details about your commission services.</p>
+        <p></p>
+      </div>
+    </div>
+    <div class="module" id="template2">
+      <div class="image-container">
+        <h2>Commission Information</h2>
+      </div>
+      <div class="text-container">
+        <p>Include details about your commission services.</p>
+
+        <a href="https://www.google.com" class="order-button">Order Here</a>
+
+        <p>Include details about your commission services.</p>
+        <p></p>
+      </div>
     </div>
 
-    <div class="module" id="shop">
-      <h2>Shop Information</h2>
-      <p>Provide an overview of your shop, products, and promotions.</p>
-      <a href="#visit-shop">Visit Shop</a>
-    </div>
+    <div class="module" id="template">
+      <div class="image-container">
+        <h2>Commission Information</h2>
+      </div>
+      <div class="text-container">
+        <p>Include details about your commission services.</p>
 
-    <div class="module" id="social-media">
-      <h2>Connect with Us</h2>
-      <p>Follow us for updates!</p>
-    </div>
+        <a href="https://www.google.com" class="order-button">Order Here</a>
 
-    <div class="module" id="section-template">
-      <h2>Section Template</h2>
-      <p>Section contents.</p>
+        <p>Include details about your commission services.</p>
+        <p></p>
+      </div>
     </div>
-    <div class="module" id="section-template2">
-      <h2>Section Template</h2>
-      <p>Section contents.</p>
-    </div>
-    <div class="module" id="section-template3">
-      <h2>Section Template</h2>
-      <p>Section contents.</p>
-    </div>
-
     <div class="module" id="footer">
       <h2></h2>
       <p>Contact me for business inquiries at <a href="mailto:XPISigmaArt@gmail.com">XPISigmaArt@gmail.com</a></p>
