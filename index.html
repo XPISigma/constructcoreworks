@@ -54,6 +54,9 @@
       font-size: 24px;
       transform: translateY(-20px);
       transition: transform 0.3s ease;
+      animation: fadeInAndScale 2s ease-out forwards;
+      animation-delay: 1.5s;
+      opacity: 0;
     }
 
     .social-icons a:hover {
@@ -117,15 +120,28 @@
     /* Top Logo */
     .responsive-iframe-wrapper {
       opacity: 0;
-      transform: translateY(-20px);
-      animation: fadeIn 1s ease-out forwards;
+      transform: translateY(-20px) scale(1.6);
+      animation: fadeInAndScale 2s ease-out forwards;
+      animation-delay: 1s;
     }
 
     .responsive-iframe {
       width: 75%;
       height: 40vh;
       border: none;
-      min-width: 200px
+      min-width: 200px;
+    }
+
+    @keyframes fadeInAndScale {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px) scale(1.5);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
     }
 
     #footer {
@@ -200,10 +216,13 @@
     h2 {
       font-weight: bold;
       font-size: 30px;
+      text-align: left;
     }
+
     h1 {
       font-weight: bold;
       font-size: 20px;
+      text-align: left;
     }
 
     p {
@@ -284,19 +303,23 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      text-align: left;
     }
 
     .logo {
-  width: 70px; /* Set the width to 70px */
-  height: auto; /* Maintain aspect ratio */
-  margin-bottom: 10px; /* Optional margin for spacing */
-}
+      width: 70px;
+      /* Set the width to 70px */
+      height: auto;
+      /* Maintain aspect ratio */
+      margin-bottom: 10px;
+      /* Optional margin for spacing */
+    }
 
-h2 {
-  text-align: left;
-  margin-top: 0;
-}
-    
+    h2 {
+      text-align: left;
+      margin-top: 0;
+    }
+
     .image-container h2 {
       margin: 0;
     }
@@ -305,7 +328,7 @@ h2 {
       width: 100px;
       height: auto;
       margin-bottom: 10px;
-text-align: center;
+      text-align: center;
     }
   </style>
 
