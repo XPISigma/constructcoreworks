@@ -110,42 +110,12 @@
       opacity: 1;
     }
 
-    .link {
-      text-decoration: none;
-      color: #ffffff;
-      font-weight: bold;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 100px;
-      height: 65px;
-      transition: all 0.3s ease;
-      border-radius: 12px;
-    }
-
-    .link i {
-      font-size: 28px;
-      margin-bottom: 5px;
-    }
-
-    .link-text {
-      font-size: 12px;
-    }
-
-    .link:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 10px rgba(72, 209, 204, 0.8);
-    }
-
     .page-break {
       height: 2px;
       background-color: white;
       border-radius: 5px;
       margin-top: 12px;
-      /* Adjusted margin instead of padding for spacing */
       margin-bottom: 12px;
-      /* Adjusted margin instead of padding for spacing */
       opacity: 0.3;
     }
 
@@ -218,6 +188,7 @@
       outline: 2px solid rgba(255, 255, 255, 0);
       box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
       transition: box-shadow 0.3s ease, outline 0.3s ease;
+      padding-bottom: 20px;
     }
 
     .module:hover {
@@ -299,24 +270,48 @@
       }
     }
 
+    .order-button-container {
+      text-align: center;
+    }
+
     .order-button {
       display: inline-block;
-      padding: 10px 20px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
       background-color: #808080;
       color: #ffffff;
-      border-radius: 20px;
+      border-radius: 10px;
       text-decoration: none;
-      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease;
       font-weight: bold;
-      transition: transform 0.3s ease;
       text-align: center;
-      margin-right: 6px;
+      margin: 5px;
+      font-family: 'Oxanium', sans-serif;
+      font-weight: 800;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .order-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: #02e8c3;
+      transition: left 0.3s ease;
+      z-index: -1;
+    }
+
+    .order-button:hover::before {
+      left: 0;
     }
 
     .order-button:hover {
-      background-color: #02e8c3;
-      transform: scale(1.05);
       color: #ffffff;
+      transform: scale(1.05);
       text-align: center;
     }
 
@@ -398,6 +393,7 @@
     h1 {
       text-align: center;
       margin-top: 0;
+      text-shadow: 0px 0px 3px rgba(255, 255, 255, 1);
     }
 
     h2 {
@@ -484,22 +480,26 @@
         <h1>Standard Commissions</h1>
         <p>Regular commissions are comprised of full colors, sketch colors, both coming in thigh up and full body.
           Please fill out the form if you're interested!</p>
-
-        <a href="https://forms.gle/pdyRjkd8mbLfg2D6A" class="order-button">Commission Request Form</a>
+        <div class="order-button-container">
+          <a href="https://forms.gle/pdyRjkd8mbLfg2D6A" class="order-button">Commission Request Form</a>
+        </div>
         <!--Page Break-->
         <div class="page-break"></div>
         <h1>Sketch Commissions</h1>
         <p>For thigh up sketch commissions, you can head to my Ko-Fi page and order there.</p>
-        <a href="https://ko-fi.com/xpisigmaart/commissions" class="order-button">Ko-Fi Commissions</a>
+        <div class="order-button-container">
+          <a href="https://ko-fi.com/xpisigmaart/commissions" class="order-button">Ko-Fi Commissions</a>
+        </div>
 
         <!--Page Break-->
         <div class="page-break"></div>
 
         <h1>Contact Me</h1>
         <p>Any questions, please contact me on X/Twitter, or email me.</p>
-
-        <a href="mailto:XPISigmaArt@gmail.com" class="order-button">Email Me</a>
-        <p></p>
+        <div class="order-button-container">
+          <a href="mailto:XPISigmaArt@gmail.com" class="order-button">Email Me</a>
+          <p></p>
+        </div>
       </div>
     </div>
     <div class="module" id="shop">
@@ -509,13 +509,16 @@
       <div class="text-container">
         <h1>Personal Shop</h1>
         <p>Check out my latest temporary items here. This includes stickers, magnets, and sometimes more!</p>
-
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf4uHFY7ay-Gy9i1i2p_KkbfHC9Ts6BKDGME499ckqZluQgSg/viewform" class="order-button">Order Form</a>
+        <div class="order-button-container">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSf4uHFY7ay-Gy9i1i2p_KkbfHC9Ts6BKDGME499ckqZluQgSg/viewform" class="order-button">Order Form</a>
+        </div>
         <!--Page Break-->
         <div class="page-break"></div>
         <h1>External Shops</h1>
         <p>Or you can check out my other storefronts! More stickers, shirts, and more stuff.</p>
-        <a href="https://www.redbubble.com/people/XPISigma/shop" class="order-button">RedBubble</a> <a href="https://www.teepublic.com/user/xpisigma" class="order-button">TeeSpring</a>
+        <div class="order-button-container">
+          <a href="https://www.redbubble.com/people/XPISigma/shop" class="order-button">RedBubble</a> <a href="https://www.teepublic.com/user/xpisigma" class="order-button">TeeSpring</a>
+        </div>
         <p></p>
       </div>
     </div>
@@ -526,15 +529,19 @@
       </div>
       <div class="text-container">
         <h1>Disclosure</h1>
-        <p>I get commission for purchases made through these links! Just click the link and you'll be on your way! Thank
-          you for your support!</p>
+        <div class="order-button-container">
+          <p>I get commission for purchases made through these links! Just click the link and you'll be on your way! Thank
+            you for your support!</p>
+        </div>
         <div class="page-break"></div>
         <!-- XP-Pen Section -->
         <h1>
           <img src="https://iili.io/H7NyPuR.png" alt="" width="100" height="auto">
         </h1>
         <p>XP-Pen drawing surfaces, graphic tablets and accessories.</p>
-        <a href="https://affiliate.xp-pen.com/scripts/click.php?a_aid=xpisigmaart&amp;a_bid=40cf8935" class="order-button">XP-Pen Store</a>
+        <div class="order-button-container">
+          <a href="https://affiliate.xp-pen.com/scripts/click.php?a_aid=xpisigmaart&amp;a_bid=40cf8935" class="order-button">XP-Pen Store</a>
+        </div>
         <!--Page Break-->
         <div class="page-break"></div>
         <!-- Wacom Section -->
@@ -542,7 +549,9 @@
           <img src="https://www.axonius.com/hs-fs/hubfs/wacom-Logo-White.png?width=789&height=216&name=wacom-Logo-White.png" alt="" width="200" height="auto">
         </h1>
         <p>Wacom drawing surfaces and accessories.</p>
-        <a href="https://wacom.pxf.io/EKPZo2" class="order-button">Wacom Store</a>
+        <div class="order-button-container">
+          <a href="https://wacom.pxf.io/EKPZo2" class="order-button">Wacom Store</a>
+        </div>
         <!--Page Break-->
         <div class="page-break"></div>
         <!-- Amazon Section -->
@@ -552,7 +561,9 @@
         </h1>
         <p>My Amazon shop with some of my favorite artist books, including figure drawing/anatomy/more! I get a small
           commission for things purchased here, thank you!</p>
-        <a href="https://www.amazon.com/shop/xpisigma_art" class="order-button">Amazon</a>
+        <div class="order-button-container">
+          <a href="https://www.amazon.com/shop/xpisigma_art" class="order-button">Amazon</a>
+        </div>
         <p></p>
       </div>
     </div>
@@ -565,15 +576,17 @@
         <h1>YouTube</h1>
         <p>Speedpaints, hardware reviews, art tutorials, gaming and stuff like that! Check it out and subscribe maybe!
         </p>
-
-        <a href="https://www.youtube.com/channel/UCgvIK1jAKEu0afWoXM2ngAQ" class="order-button">YouTube</a>
+        <div class="order-button-container">
+          <a href="https://www.youtube.com/channel/UCgvIK1jAKEu0afWoXM2ngAQ" class="order-button">YouTube</a>
+        </div>
         <!--Page Break-->
         <div class="page-break"></div>
         <h1>TouchBox</h1>
         <p>A hitbox fighting game controller for touchscreens. You can't use it to play, but you can use it to gain
           muscle memory in case you wanted to buy a real life hitbox!</p>
-
-        <a href="https://xpisigma.github.io/TouchBox/" class="order-button">TouchBox</a>
+        <div class="order-button-container">
+          <a href="https://xpisigma.github.io/TouchBox/" class="order-button">TouchBox</a>
+        </div>
         <p></p>
         <p></p>
       </div>
@@ -585,10 +598,10 @@
       </div>
       <div class="text-container">
         <h1>Itch.io</h1>
-        <p>I haven't worked on a project in a while, but please feel free to check out my itch.io page! My goals are to
-          learn GODOT4, and start working on a dream project of mine.</p>
-
-        <a href="https://chrome-cloak-games.itch.io/" class="order-button">Itch.io Game Page</a>
+        <p>I haven't worked on a project in a while, but please feel free to check out my itch.io page! My goals are to learn GODOT4, and start working on a dream project of mine.</p>
+        <div class="order-button-container">
+          <a href="https://chrome-cloak-games.itch.io/" class="order-button">Itch.io Game Page</a>
+        </div>
         <p></p>
         <p></p>
       </div>
@@ -600,15 +613,14 @@
       </div>
 
       <div class="text-container">
-        <p>Hey there. I'm XPI Sigma, a digital artist in the USA who loves drawing vibrant pinups. I'm very interested
-          in technology as well, so you'll catch me doing hardware reviews on the side as well as delve into game
-          development using the name Construct Core Works, (and previously Chrome Cloak Games). Thanks for joining me on
-          my art journey!</p>
+        <p>Hey there. I'm XPI Sigma, a digital artist in the USA who loves drawing vibrant pinups. I'm very interested in technology as well, so you'll catch me doing hardware reviews on the side as well as delve into game development using the name Construct Core Works, (and previously Chrome Cloak Games). Thanks for joining me on my art journey!</p>
         <!--Page Break-->
         <div class="page-break"></div>
         <h1>OC References</h1>
         <p>If you're after some refs of my OCs, head here! Should have everything you need.</p>
-        <a href="https://toyhou.se/XPISigma" class="order-button">TOYHOU.SE</a>
+        <div class="order-button-container">
+          <a href="https://toyhou.se/XPISigma" class="order-button">TOYHOU.SE</a>
+        </div>
       </div>
     </div>
 
