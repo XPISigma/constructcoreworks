@@ -11,7 +11,8 @@
   <link rel="icon" href="path/to/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" sizes="180x180" href="path/to/apple-touch-icon.png">
   <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="...">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="...">
 
   <style>
     body {
@@ -133,15 +134,18 @@
       transform: scale(1.1);
       box-shadow: 0 0 10px rgba(72, 209, 204, 0.8);
     }
-    
-.page-break {
-  height: 2px;
-  background-color: white;
-  border-radius: 5px;
-  margin-top: 12px; /* Adjusted margin instead of padding for spacing */
-  margin-bottom: 12px; /* Adjusted margin instead of padding for spacing */
-  opacity: 0.3;
-}
+
+    .page-break {
+      height: 2px;
+      background-color: white;
+      border-radius: 5px;
+      margin-top: 12px;
+      /* Adjusted margin instead of padding for spacing */
+      margin-bottom: 12px;
+      /* Adjusted margin instead of padding for spacing */
+      opacity: 0.3;
+    }
+
     /* Top Logo */
     .responsive-iframe-wrapper {
       opacity: 0;
@@ -152,7 +156,7 @@
 
     .responsive-iframe {
       width: 75%;
-      height: 40vh;
+      height: 50vh;
       border: none;
       min-width: 200px;
     }
@@ -308,13 +312,53 @@
 
     .order-button:hover {
       background-color: #02e8c3;
-      transform: scale(1.1);
+      transform: scale(1.05);
       color: #ffffff;
       text-align: center;
     }
 
     #commission {
       position: relative;
+    }
+    
+
+
+
+
+    #commission-image {
+      background-image: url('https://i.ibb.co/VNvDRQP/cccommission.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    #shop-image {
+      background-image: url('https://i.ibb.co/vqYSy1m/ccshop.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    #affiliate-image {
+      background-image: url('https://i.ibb.co/x33qYhg/ccaffiliate.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    #dev-image {
+      background-image: url('https://i.ibb.co/7tN2Y6h/ccdev.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    #project-image {
+      background-image: url('https://i.ibb.co/jJVGz5G/ccprojects.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    #bio-image {
+      background-image: url('https://i.ibb.co/3CvK4kB/ccbio.png');
+      background-size: cover;
+      background-position: center;
     }
 
     .text-container {
@@ -346,12 +390,11 @@
       text-align: left;
     }
 
+
     .logo {
       width: 70px;
       height: auto;
-      /* Maintain aspect ratio */
       margin-bottom: 10px;
-      /* Optional margin for spacing */
     }
 
     h2 {
@@ -402,36 +445,42 @@
 
 <body>
   <div class="responsive-iframe-wrapper">
-    <iframe class="responsive-iframe" src="https://XPISigma.github.io/constructcoreworks/cclogo.html" frameborder="0" scrolling="no" overflow="show"></iframe>
+    <iframe class="responsive-iframe" src="https://XPISigma.github.io/constructcoreworks/cclogo.html" frameborder="0"
+      scrolling="no" overflow="show"></iframe>
   </div>
   <div class="social-icons">
     <a href="https://twitter.com/XPISigmaArt" target="_blank" data-id="Twitter"><i class="fab fa-twitter"></i></a>
-    <a href="https://www.instagram.com/xpisigma_art/" target="_blank" data-id="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.instagram.com/xpisigma_art/" target="_blank" data-id="Instagram"><i
+        class="fab fa-instagram"></i></a>
     <a href="https://youtube.com/xpisigmaart" target="_blank" data-id="YouTube"><i class="fab fa-youtube"></i></a>
     <a href="https://www.tiktok.com/@xpisigmaart" target="_blank" data-id="TikTok"><i class="fab fa-tiktok"></i></a>
     <a href="https://picarto.tv/XPISigmaArt" target="_blank" data-id="Picarto"><i class="fas fa-tv"></i></a>
     <a href="https://www.twitch.tv/xpisigmaart" target="_blank" data-id="TwitchTV"><i class="fab fa-twitch"></i></a>
-    <a href="https://xpisigmaart.newgrounds.com" target="_blank" data-id="Newgrounds"><i class="fa-solid fa-bomb"></i></a>
+    <a href="https://xpisigmaart.newgrounds.com" target="_blank" data-id="Newgrounds"><i
+        class="fa-solid fa-bomb"></i></a>
     <a href="https://www.patreon.com/XPISigmaArt" target="_blank" data-id="Patreon"><i class="fab fa-patreon"></i></a>
     <a href="https://ko-fi.com/xpisigma" target="_blank" data-id="Ko-Fi"><i class="fas fa-coffee"></i></a>
   </div>
 
   <section>
     <div class="module" id="commission">
-      <div class="image-container">
-        <h2>Commission Information</h2>
+      <div class="image-container" id="commission-image">
+        <h2></h2>
       </div>
       <div class="text-container">
         <h1>Standard Commissions</h1>
-        <p>Regular commissions are comprised of full colors, sketch colors, both coming in thigh up and full body. Please fill out the form if you're interested!</p>
+        <p>Regular commissions are comprised of full colors, sketch colors, both coming in thigh up and full body.
+          Please fill out the form if you're interested!</p>
 
         <a href="https://www.google.com" class="order-button">Commission Request Form</a>
-        <!--Page Break--> <div class="page-break"></div>
+        <!--Page Break-->
+        <div class="page-break"></div>
         <h1>Sketch Commissions</h1>
         <p>For thigh up sketch commissions, you can head to my Ko-Fi page and order there.</p>
         <a href="https://www.google.com" class="order-button">Ko-Fi Commissions</a>
-        
-        <!--Page Break--> <div class="page-break"></div>
+
+        <!--Page Break-->
+        <div class="page-break"></div>
 
         <h1>Contact Me</h1>
         <p>Any questions, please contact me on X/Twitter, or email me.</p>
@@ -441,60 +490,71 @@
       </div>
     </div>
     <div class="module" id="shop">
-      <div class="image-container">
-        <h2>Shop</h2>
+      <div class="image-container" id="shop-image">
+        <h2></h2>
       </div>
       <div class="text-container">
         <h1>Personal Shop</h1>
         <p>Check out my latest temporary items here. This includes stickers, magnets, and sometimes more!</p>
 
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf4uHFY7ay-Gy9i1i2p_KkbfHC9Ts6BKDGME499ckqZluQgSg/viewform" class="order-button">Order Form</a>
-        <!--Page Break--> <div class="page-break"></div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf4uHFY7ay-Gy9i1i2p_KkbfHC9Ts6BKDGME499ckqZluQgSg/viewform"
+          class="order-button">Order Form</a>
+        <!--Page Break-->
+        <div class="page-break"></div>
         <h1>External Shops</h1>
         <p>Or you can check out my other storefronts! More stickers, shirts, and more stuff.</p>
-        <a href="https://www.redbubble.com/people/XPISigma/shop" class="order-button">RedBubble</a> <a href="https://www.teepublic.com/user/xpisigma" class="order-button">TeeSpring</a>
+        <a href="https://www.redbubble.com/people/XPISigma/shop" class="order-button">RedBubble</a> <a
+          href="https://www.teepublic.com/user/xpisigma" class="order-button">TeeSpring</a>
         <p></p>
       </div>
     </div>
 
-<div class="module" id="affiliate">
-  <div class="image-container">
-    <h2>Affiliates</h2>
-  </div>
-  <div class="text-container">
-    <!-- XP-Pen Section -->
-    <h1>
-  <img src="https://iili.io/H7NyPuR.png" alt="" width="100" height="auto">
-    </h1>
-    <p>I get a small commission whenever products are purchased using this link! Thank you!</p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf4uHFY7ay-Gy9i1i2p_KkbfHC9Ts6BKDGME499ckqZluQgSg/viewform" class="order-button">XP-Pen Store</a>
-<!--Page Break--> <div class="page-break"></div>
-    <!-- Wacom Section -->
-    <h1>
-  <img src="https://www.axonius.com/hs-fs/hubfs/wacom-Logo-White.png?width=789&height=216&name=wacom-Logo-White.png" alt="" width="200" height="auto">
-    </h1>
-    <p>I get a small commission whenever products are purchased using this link! Thank you!</p>
-    <a href="https://www.redbubble.com/people/XPISigma/shop" class="order-button">Wacom Store</a>
-<!--Page Break--> <div class="page-break"></div>
-    <!-- Amazon Section -->
-    <h1>
-<img src="https://cdn.freebiesupply.com/images/large/2x/amazon-logo-transparent.png" alt="" width="200" height="auto" style="filter: brightness(0) invert(1) brightness(100%);">
+    <div class="module" id="affiliate">
+      <div class="image-container" id="affiliate-image">
+        <h2></h2>
+      </div>
+      <div class="text-container">
+        <!-- XP-Pen Section -->
+        <h1>
+          <img src="https://iili.io/H7NyPuR.png" alt="" width="100" height="auto">
+        </h1>
+        <p>I get a small commission whenever products are purchased using this link! Thank you!</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf4uHFY7ay-Gy9i1i2p_KkbfHC9Ts6BKDGME499ckqZluQgSg/viewform"
+          class="order-button">XP-Pen Store</a>
+        <!--Page Break-->
+        <div class="page-break"></div>
+        <!-- Wacom Section -->
+        <h1>
+          <img
+            src="https://www.axonius.com/hs-fs/hubfs/wacom-Logo-White.png?width=789&height=216&name=wacom-Logo-White.png"
+            alt="" width="200" height="auto">
+        </h1>
+        <p>I get a small commission whenever products are purchased using this link! Thank you!</p>
+        <a href="https://www.redbubble.com/people/XPISigma/shop" class="order-button">Wacom Store</a>
+        <!--Page Break-->
+        <div class="page-break"></div>
+        <!-- Amazon Section -->
+        <h1>
+          <img src="https://cdn.freebiesupply.com/images/large/2x/amazon-logo-transparent.png" alt="" width="200"
+            height="auto" style="filter: brightness(0) invert(1) brightness(100%);">
 
-    </h1>
-    <p>My Amazon shop with some of my favorite artist books, including figure drawing/anatomy/more! I get a small commission for things purchased here, thank you!</p>
-    <a href="https://www.redbubble.com/people/XPISigma/shop" class="order-button">Amazon</a>
-    <p></p>
-  </div>
-</div>
+        </h1>
+        <p>My Amazon shop with some of my favorite artist books, including figure drawing/anatomy/more! I get a small
+          commission for things purchased here, thank you!</p>
+        <a href="https://www.redbubble.com/people/XPISigma/shop" class="order-button">Amazon</a>
+        <p></p>
+      </div>
+    </div>
 
 
     <div class="module" id="gamedev">
-      <div class="image-container">
-        <h2>Game Development</h2>
+      <div class="image-container" id="dev-image">
+        <h2></h2>
       </div>
       <div class="text-container">
         <h1>Itch.io</h1>
-        <p>I haven't worked on a project in a while, but please feel free to check out my itch.io page! My goals are to learn GODOT4, and start working on a dream project of mine.</p>
+        <p>I haven't worked on a project in a while, but please feel free to check out my itch.io page! My goals are to
+          learn GODOT4, and start working on a dream project of mine.</p>
 
         <a href="https://chrome-cloak-games.itch.io/" class="order-button">Itch.io Game Page</a>
         <p></p>
@@ -503,12 +563,13 @@
     </div>
 
     <div class="module" id="projects">
-      <div class="image-container">
-        <h2>Projects</h2>
+      <div class="image-container" id="project-image">
+        <h2></h2>
       </div>
       <div class="text-container">
         <h1>TouchBox</h1>
-        <p>A hitbox fighting game controller for touchscreens. You can't use it to play, but you can use it to gain muscle memory in case you wanted to buy a real life hitbox!</p>
+        <p>A hitbox fighting game controller for touchscreens. You can't use it to play, but you can use it to gain
+          muscle memory in case you wanted to buy a real life hitbox!</p>
 
         <a href="https://xpisigma.github.io/TouchBox/" class="order-button">TouchBox</a>
         <p></p>
@@ -517,18 +578,22 @@
     </div>
 
     <div class="module" id="bio">
-      <div class="image-container">
-        <h2>Bio</h2>
+      <div class="image-container" id="bio-image">
+        <h2></h2>
       </div>
 
       <div class="text-container">
-        <p>Hey there. I'm XPI Sigma, a digital artist in the USA who loves drawing vibrant pinups. I'm very interested in technology as well, so you'll catch me doing hardware reviews on the side as well as delve into game development using the name Construct Core Works, (and previously Chrome Cloak Games). Thanks for joining me on my art journey!</p>
+        <p>Hey there. I'm XPI Sigma, a digital artist in the USA who loves drawing vibrant pinups. I'm very interested
+          in technology as well, so you'll catch me doing hardware reviews on the side as well as delve into game
+          development using the name Construct Core Works, (and previously Chrome Cloak Games). Thanks for joining me on
+          my art journey!</p>
       </div>
     </div>
 
     <div class="footer" id="footer">
       <h2></h2>
-      <p>Contact me for business inquiries (or if the site is broken) at <a href="mailto:XPISigmaArt@gmail.com">XPISigmaArt@gmail.com</a></p>
+      <p>Contact me for business inquiries (or if the site is broken) at <a
+          href="mailto:XPISigmaArt@gmail.com">XPISigmaArt@gmail.com</a></p>
     </div>
     <div id="scroll-indicator" class="hidden">
       <span id="up-arrow">&#9650;</span>
@@ -537,7 +602,7 @@
   </section>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
       const scrollIndicator = document.getElementById("scroll-indicator");
 
       function updateScrollIndicator() {
