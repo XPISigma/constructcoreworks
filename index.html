@@ -6,40 +6,26 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXYDS8RJF5"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
 
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
     gtag('config', 'G-LXYDS8RJF5');
   </script>
-  <title>Construct Core Works - XPI Sigma Art</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxanium:wght@800&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300&display=swap">
   <link rel="icon" href="https://i.ibb.co/8cnwwq4/AtroNew1.gif" type="image/gif">
   <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    integrity="...">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="...">
 
   <style>
     body {
-      /* Hide the default scrollbar */
-      scrollbar-width: thin;
-      scrollbar-color: transparent transparent;
-
-      /* Firefox */
-      /* Webkit (Chrome, Safari) */
-      ::-webkit-scrollbar {
-        width: 3px;
-      }
-
-      ::-webkit-scrollbar-thumb {
-        background-color: transparent;
-      }
-
       user-select: none;
       font-family: 'Oxanium',
-      sans-serif;
+        sans-serif;
       font-weight: 300;
       background: url('https://i.ibb.co/p0TpMwV/bgthingcc-moshed-01-20-21-16-18.png" alt="bgthingcc') top/cover repeat fixed !important;
       background-size: 100vh cover !important;
@@ -49,11 +35,21 @@
       font-size: 17px;
     }
 
-    body::-webkit-scrollbar {
-      display: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    ::-webkit-scrollbar {
+      width: 12px;
+      /* Width of the scrollbar */
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: white;
+      /* Color of the thumb (the draggable part) */
+      border-radius: 6px;
+      /* Rounded corners for the thumb */
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: black;
+      /* Color of the track (the area behind the thumb) */
     }
 
     section {
@@ -328,44 +324,40 @@
       position: relative;
     }
 
-
-
-
-
     #commission-image {
-      background-image: url('https://i.ibb.co/VNvDRQP/cccommission.png');
+      background-image: url('https://i.ibb.co/HG9kvSG/cccommission2.jpg');
       background-size: cover;
-      background-position: right;
+      background-position: center;
     }
 
     #shop-image {
-      background-image: url('https://i.ibb.co/vqYSy1m/ccshop.png');
+      background-image: url('https://i.ibb.co/FK5n2Vq/ccshop2.jpg');
       background-size: cover;
-      background-position: right;
+      background-position: center;
     }
 
     #affiliate-image {
-      background-image: url('https://i.ibb.co/x33qYhg/ccaffiliate.png');
+      background-image: url('https://i.ibb.co/PQv0Ft3/ccaffiliate2.jpg');
       background-size: cover;
-      background-position: right;
+      background-position: center;
     }
 
     #dev-image {
-      background-image: url('https://i.ibb.co/7tN2Y6h/ccdev.png');
+      background-image: url('https://i.ibb.co/1bypSpr/ccdev2.jpg');
       background-size: cover;
-      background-position: right;
+      background-position: center;
     }
 
     #project-image {
-      background-image: url('https://i.ibb.co/jJVGz5G/ccprojects.png');
+      background-image: url('https://i.ibb.co/fqszjSc/ccprojects2.jpg');
       background-size: cover;
-      background-position: right;
+      background-position: center;
     }
 
     #bio-image {
-      background-image: url('https://i.ibb.co/3CvK4kB/ccbio.png');
+      background-image: url('https://i.ibb.co/zx3KKMc/ccbio2.jpg');
       background-size: cover;
-      background-position: right;
+      background-position: center;
     }
 
     .text-container {
@@ -392,11 +384,10 @@
       border-top-left-radius: 20px;
       border-top-right-radius: 20px;
       display: flex;
-      justify-content: right;
-      align-items: right;
-      text-align: left;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
-
 
     .logo {
       width: 70px;
@@ -404,13 +395,31 @@
       margin-bottom: 10px;
     }
 
-    h2 {
-      text-align: left;
+    h1 {
+      text-align: center;
       margin-top: 0;
     }
 
+    h2 {
+      text-align: center;
+      margin-top: 0;
+      color: white;
+      text-shadow: 2px 2px 0px rgba(0, 0, 0, 1),
+        -2px 2px 0px rgba(0, 0, 0, 1),
+        2px -2px 0px rgba(0, 0, 0, 1),
+        5px 5px 0px rgba(0, 0, 0, 1),
+        -2px -2px 0px rgba(0, 0, 0, 1);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+
     .image-container h2 {
-      margin: 0;
+      margin: 5px;
+      padding: 5px;
+      text-align: center;
     }
 
     #scroll-indicator {
@@ -452,19 +461,16 @@
 
 <body>
   <div class="responsive-iframe-wrapper">
-    <iframe class="responsive-iframe" src="https://XPISigma.github.io/constructcoreworks/cclogo.html" frameborder="0"
-      scrolling="no" overflow="show"></iframe>
+    <iframe class="responsive-iframe" src="https://XPISigma.github.io/constructcoreworks/cclogo.html" frameborder="0" scrolling="no" overflow="show"></iframe>
   </div>
   <div class="social-icons">
     <a href="https://twitter.com/XPISigmaArt" target="_blank" data-id="Twitter"><i class="fab fa-twitter"></i></a>
-    <a href="https://www.instagram.com/xpisigma_art/" target="_blank" data-id="Instagram"><i
-        class="fab fa-instagram"></i></a>
+    <a href="https://www.instagram.com/xpisigma_art/" target="_blank" data-id="Instagram"><i class="fab fa-instagram"></i></a>
     <a href="https://youtube.com/xpisigmaart" target="_blank" data-id="YouTube"><i class="fab fa-youtube"></i></a>
     <a href="https://www.tiktok.com/@xpisigmaart" target="_blank" data-id="TikTok"><i class="fab fa-tiktok"></i></a>
     <a href="https://picarto.tv/XPISigmaArt" target="_blank" data-id="Picarto"><i class="fas fa-tv"></i></a>
     <a href="https://www.twitch.tv/xpisigmaart" target="_blank" data-id="TwitchTV"><i class="fab fa-twitch"></i></a>
-    <a href="https://xpisigmaart.newgrounds.com" target="_blank" data-id="Newgrounds"><i
-        class="fa-solid fa-bomb"></i></a>
+    <a href="https://xpisigmaart.newgrounds.com" target="_blank" data-id="Newgrounds"><i class="fa-solid fa-bomb"></i></a>
     <a href="https://www.patreon.com/XPISigmaArt" target="_blank" data-id="Patreon"><i class="fab fa-patreon"></i></a>
     <a href="https://ko-fi.com/xpisigma" target="_blank" data-id="Ko-Fi"><i class="fas fa-coffee"></i></a>
   </div>
@@ -472,7 +478,7 @@
   <section>
     <div class="module" id="commission">
       <div class="image-container" id="commission-image">
-        <h2></h2>
+        <h2>Commission</h2>
       </div>
       <div class="text-container">
         <h1>Standard Commissions</h1>
@@ -498,27 +504,25 @@
     </div>
     <div class="module" id="shop">
       <div class="image-container" id="shop-image">
-        <h2></h2>
+        <h2>Shop</h2>
       </div>
       <div class="text-container">
         <h1>Personal Shop</h1>
         <p>Check out my latest temporary items here. This includes stickers, magnets, and sometimes more!</p>
 
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf4uHFY7ay-Gy9i1i2p_KkbfHC9Ts6BKDGME499ckqZluQgSg/viewform"
-          class="order-button">Order Form</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf4uHFY7ay-Gy9i1i2p_KkbfHC9Ts6BKDGME499ckqZluQgSg/viewform" class="order-button">Order Form</a>
         <!--Page Break-->
         <div class="page-break"></div>
         <h1>External Shops</h1>
         <p>Or you can check out my other storefronts! More stickers, shirts, and more stuff.</p>
-        <a href="https://www.redbubble.com/people/XPISigma/shop" class="order-button">RedBubble</a> <a
-          href="https://www.teepublic.com/user/xpisigma" class="order-button">TeeSpring</a>
+        <a href="https://www.redbubble.com/people/XPISigma/shop" class="order-button">RedBubble</a> <a href="https://www.teepublic.com/user/xpisigma" class="order-button">TeeSpring</a>
         <p></p>
       </div>
     </div>
 
     <div class="module" id="affiliate">
       <div class="image-container" id="affiliate-image">
-        <h2></h2>
+        <h2>Affiliate</h2>
       </div>
       <div class="text-container">
         <h1>Disclosure</h1>
@@ -530,15 +534,12 @@
           <img src="https://iili.io/H7NyPuR.png" alt="" width="100" height="auto">
         </h1>
         <p>XP-Pen drawing surfaces, graphic tablets and accessories.</p>
-        <a href="https://affiliate.xp-pen.com/scripts/click.php?a_aid=xpisigmaart&amp;a_bid=40cf8935"
-          class="order-button">XP-Pen Store</a>
+        <a href="https://affiliate.xp-pen.com/scripts/click.php?a_aid=xpisigmaart&amp;a_bid=40cf8935" class="order-button">XP-Pen Store</a>
         <!--Page Break-->
         <div class="page-break"></div>
         <!-- Wacom Section -->
         <h1>
-          <img
-            src="https://www.axonius.com/hs-fs/hubfs/wacom-Logo-White.png?width=789&height=216&name=wacom-Logo-White.png"
-            alt="" width="200" height="auto">
+          <img src="https://www.axonius.com/hs-fs/hubfs/wacom-Logo-White.png?width=789&height=216&name=wacom-Logo-White.png" alt="" width="200" height="auto">
         </h1>
         <p>Wacom drawing surfaces and accessories.</p>
         <a href="https://wacom.pxf.io/EKPZo2" class="order-button">Wacom Store</a>
@@ -546,8 +547,7 @@
         <div class="page-break"></div>
         <!-- Amazon Section -->
         <h1>
-          <img src="https://cdn.freebiesupply.com/images/large/2x/amazon-logo-transparent.png" alt="" width="200"
-            height="auto" style="filter: brightness(0) invert(1) brightness(100%);">
+          <img src="https://cdn.freebiesupply.com/images/large/2x/amazon-logo-transparent.png" alt="" width="200" height="auto" style="filter: brightness(0) invert(1) brightness(100%);">
 
         </h1>
         <p>My Amazon shop with some of my favorite artist books, including figure drawing/anatomy/more! I get a small
@@ -559,7 +559,7 @@
 
     <div class="module" id="projects">
       <div class="image-container" id="project-image">
-        <h2></h2>
+        <h2>Projects</h2>
       </div>
       <div class="text-container">
         <h1>YouTube</h1>
@@ -581,7 +581,7 @@
 
     <div class="module" id="gamedev">
       <div class="image-container" id="dev-image">
-        <h2></h2>
+        <h2>Game Dev</h2>
       </div>
       <div class="text-container">
         <h1>Itch.io</h1>
@@ -594,11 +594,9 @@
       </div>
     </div>
 
-
-
     <div class="module" id="bio">
       <div class="image-container" id="bio-image">
-        <h2></h2>
+        <h2>Bio</h2>
       </div>
 
       <div class="text-container">
@@ -616,8 +614,7 @@
 
     <div class="footer" id="footer">
       <h2></h2>
-      <p>Contact me for business inquiries (or if the site is broken) at <a
-          href="mailto:XPISigmaArt@gmail.com">XPISigmaArt@gmail.com</a></p>
+      <p>Contact me for business inquiries (or if the site is broken) at <a href="mailto:XPISigmaArt@gmail.com">XPISigmaArt@gmail.com</a></p>
       <div class="page-break"></div>
       <p>Artwork is protected under Copyright © and Creative Commons and may not be distributed or included in any AI
         sets without artist's permission or used in any merchandise/promotional material without artist consent.
@@ -630,7 +627,7 @@
   </section>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function() {
       const scrollIndicator = document.getElementById("scroll-indicator");
 
       function updateScrollIndicator() {
