@@ -22,8 +22,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300&display=swap">
   <link rel="icon" href="https://i.ibb.co/8cnwwq4/AtroNew1.gif" type="image/gif">
   <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    integrity="...">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="...">
 
   <style>
     body {
@@ -160,6 +159,7 @@
       margin: 10px;
       padding: 10px;
       text-align: center;
+      min-width: 400px;
       color: #fff;
       z-index: 1;
       transform: translateY(-20px);
@@ -196,6 +196,14 @@
 
     .module:nth-child(6) {
       animation-delay: 4s;
+    }
+
+    .module:nth-child(7) {
+      animation-delay: 4.4s;
+    }
+
+    .module:nth-child(8) {
+      animation-delay: 4.8s;
     }
 
     @keyframes fadeIn {
@@ -321,6 +329,8 @@
       border: 2px solid white;
       position: relative;
       margin: auto;
+      padding-top: 10px;
+      padding-bottom: 10px;
     }
 
     .youtube-video {
@@ -328,6 +338,8 @@
       height: 100%;
       display: block;
       margin: auto;
+      padding-top: 10px;
+      padding-bottom: 10px;
     }
 
     .order-button:hover {
@@ -473,28 +485,41 @@
     body:not(.scrollable) #down-arrow {
       display: none;
     }
+
+    #ad1,
+    #ad2 {
+      max-width: 400px;
+      max-height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #ad1 img,
+    #ad2 img {
+      width: 100%;
+      height: auto;
+      max-width: 400px;
+      max-height: 400px;
+    }
   </style>
 </head>
 
 <body>
   <div class="responsive-iframe-wrapper">
-    <iframe class="responsive-iframe" src="https://XPISigma.github.io/constructcoreworks/cclogo.html" frameborder="0"
-      scrolling="no" overflow="show"></iframe>
+    <iframe class="responsive-iframe" src="https://XPISigma.github.io/constructcoreworks/cclogo.html" frameborder="0" scrolling="no" overflow="show"></iframe>
   </div>
   <div class="social-icons">
     <a href="https://twitter.com/XPISigmaArt" target="_blank" data-id="Twitter"><i class="fab fa-twitter"></i></a>
-    <a href="https://www.instagram.com/xpisigma_art/" target="_blank" data-id="Instagram"><i
-        class="fab fa-instagram"></i></a>
+    <a href="https://www.instagram.com/xpisigma_art/" target="_blank" data-id="Instagram"><i class="fab fa-instagram"></i></a>
     <a href="https://www.threads.net/@xpisigma_art" target="_blank" data-id="Threads"><i class="fas fa-at"></i></a>
     <a href="https://ko-fi.com/xpisigma" target="_blank" data-id="Ko-Fi"><i class="fas fa-coffee"></i></a>
     <a href="https://youtube.com/xpisigmaart" target="_blank" data-id="YouTube"><i class="fab fa-youtube"></i></a>
     <a href="https://www.tiktok.com/@xpisigmaart" target="_blank" data-id="TikTok"><i class="fab fa-tiktok"></i></a>
     <a href="https://picarto.tv/XPISigmaArt" target="_blank" data-id="Picarto"><i class="fas fa-tv"></i></a>
-    <a href="https://bsky.app/profile/xpisigmaart.bsky.social" target="_blank" data-id="Bluesky"><i
-        class="fas fa-cloud"></i></a>
+    <a href="https://bsky.app/profile/xpisigmaart.bsky.social" target="_blank" data-id="Bluesky"><i class="fas fa-cloud"></i></a>
     <a href="https://www.twitch.tv/xpisigmaart" target="_blank" data-id="TwitchTV"><i class="fab fa-twitch"></i></a>
-    <a href="https://xpisigmaart.newgrounds.com" target="_blank" data-id="Newgrounds"><i
-        class="fa-solid fa-bomb"></i></a>
+    <a href="https://xpisigmaart.newgrounds.com" target="_blank" data-id="Newgrounds"><i class="fa-solid fa-bomb"></i></a>
     <a href="https://www.patreon.com/XPISigmaArt" target="_blank" data-id="Patreon"><i class="fab fa-patreon"></i></a>
     <a href="https://ko-fi.com/xpisigma" target="_blank" data-id="Ko-Fi"><i class="fas fa-coffee"></i></a>
   </div>
@@ -538,16 +563,14 @@
         <h1>Personal Shop</h1>
         <p>Check out my latest temporary items here. This includes stickers, magnets, and sometimes more!</p>
         <div class="order-button-container">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSf4uHFY7ay-Gy9i1i2p_KkbfHC9Ts6BKDGME499ckqZluQgSg/viewform"
-            class="order-button">Order Form</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSf4uHFY7ay-Gy9i1i2p_KkbfHC9Ts6BKDGME499ckqZluQgSg/viewform" class="order-button">Order Form</a>
         </div>
         <!--Page Break-->
         <div class="page-break"></div>
         <h1>External Shops</h1>
         <p>Or you can check out my other storefronts! More stickers, shirts, and more stuff.</p>
         <div class="order-button-container">
-          <a href="https://www.redbubble.com/people/XPISigma/shop" class="order-button">RedBubble</a> <a
-            href="https://www.teepublic.com/user/xpisigma" class="order-button">TeeSpring</a>
+          <a href="https://www.redbubble.com/people/XPISigma/shop" class="order-button">RedBubble</a> <a href="https://www.teepublic.com/user/xpisigma" class="order-button">TeeSpring</a>
         </div>
         <p></p>
       </div>
@@ -562,9 +585,13 @@
         <p>Speedpaints, hardware reviews, art tutorials, gaming and stuff like that! Check it out and subscribe maybe!
         </p>
         <div class="rounded-container">
-          <iframe class="youtube-video" src="https://www.youtube.com/embed/ilAWyMcYkKk" frameborder="0"
-            allowfullscreen></iframe>
+          <iframe class="youtube-video" src="https://www.youtube.com/embed/ilAWyMcYkKk" frameborder="0" allowfullscreen></iframe>
         </div>
+
+        <div class="rounded-container">
+          <iframe class="youtube-video" src="https://www.youtube.com/embed/hYSGIlRBnw0" frameborder="0" allowfullscreen></iframe>
+        </div>
+
         <!--Page Break-->
         <div class="page-break"></div>
         <h1>TouchBox</h1>
@@ -585,34 +612,23 @@
       <div class="text-container">
         <h1>Disclosure</h1>
         <div class="order-button-container">
-          <p>I get commission for purchases made through these links! Just click the link and you'll be on your way!
-            Thank
-            you for your support!</p>
+          <p>I get a commission for purchases made through these links, and the ads at the bottom of the page. Thank you for your support!</p>
         </div>
         <div class="page-break"></div>
         <!-- XP-Pen Section -->
         <h1>
           <img src="https://iili.io/H7NyPuR.png" alt="" width="100" height="auto">
         </h1>
-        <p>XP-Pen drawing surfaces, graphic tablets and accessories.</p>
+        <p>XP-Pen drawing surfaces, graphic tablets, and accessories.</p>
         <div class="order-button-container">
-          <a href="https://affiliate.xp-pen.com/scripts/click.php?a_aid=xpisigmaart&amp;a_bid=40cf8935"
-            class="order-button">XP-Pen Store</a>
+          <a href="https://affiliate.xp-pen.com/scripts/click.php?a_aid=xpisigmaart&amp;a_bid=40cf8935" class="order-button">XP-Pen Store</a>
         </div>
-        <a href="https://affiliate.xp-pen.com/scripts/click.php?a_aid=xpisigmaart&a_bid=34d189b5" target="_blank">
-          <img src="https://resource.xp-pen.com/Uploads/images/20240131/gjdjSFdj2lly07WcxpT3.webp" alt="XP-Pen Image"
-            style="width: 90%; border-radius: 20px;">
-        </a>
-
-        <p style="text-align: center; font-weight: bold; margin-top: 10px;">Ends 2/14/2024</p>
 
         <!--Page Break-->
         <div class="page-break"></div>
         <!-- Wacom Section -->
         <h1>
-          <img
-            src="https://www.axonius.com/hs-fs/hubfs/wacom-Logo-White.png?width=789&height=216&name=wacom-Logo-White.png"
-            alt="" width="200" height="auto">
+          <img src="https://www.axonius.com/hs-fs/hubfs/wacom-Logo-White.png?width=789&height=216&name=wacom-Logo-White.png" alt="" width="200" height="auto">
         </h1>
         <p>Wacom drawing surfaces and accessories.</p>
         <div class="order-button-container">
@@ -622,29 +638,22 @@
         <div class="page-break"></div>
         <!-- Amazon Section -->
         <h1>
-          <img src="https://cdn.freebiesupply.com/images/large/2x/amazon-logo-transparent.png" alt="" width="200"
-            height="auto" style="filter: brightness(0) invert(1) brightness(100%);">
-
+          <img src="https://cdn.freebiesupply.com/images/large/2x/amazon-logo-transparent.png" alt="" width="200" height="auto" style="filter: brightness(0) invert(1) brightness(100%);">
         </h1>
-        <p>My Amazon shop with some of my favorite artist books, including figure drawing/anatomy/more! I get a small
-          commission for things purchased here, thank you!</p>
+        <p>My Amazon shop with some of my favorite artist books, including figure drawing/anatomy/more! I get a small commission for things purchased here, thank you!</p>
         <div class="order-button-container">
           <a href="https://www.amazon.com/shop/xpisigma_art" class="order-button">Amazon</a>
-
-          <!--Page Break-->
-          <div class="page-break"></div>
-
-          <img src="https://i.ibb.co/wKVhTBS/coreldrawa.png" alt="" width="200" height="auto">
-          <a href="https://corel.sjv.io/c/5045742/1790597/20119" target="_blank">
-            <img src="https://i.ibb.co/SybvGMQ/cdgs23q2-affiliate-banners-300x250-nl.jpg" alt="XP-Pen Image"
-              style="width: 90%; border-radius: 20px;"> </a>
         </div>
-        <p>Get a discount on the CorelDraw suite!</p>
-        <a href="https://corel.sjv.io/c/5045742/1790597/20119" target="_blank">
-          <img src="https://i.ibb.co/qs1DFGJ/cenglish1.jpg" alt="XP-Pen Image" style="width: 90%; border-radius: 20px;">
-        </a>
 
-        <p></p>
+        <!--Page Break-->
+        <div class="page-break"></div>
+        <h1>
+          <img src="https://i.ibb.co/wKVhTBS/coreldrawa.png" alt="" width="200" height="auto" style="filter: brightness(0) invert(1) brightness(100%);">
+        </h1>
+        <p>You can get a discount on a CorelDRAW subscription here!</p>
+        <div class="order-button-container">
+          <a href="https://corel.sjv.io/c/5045742/1790597/20119" class="order-button">CorelDRAW</a>
+        </div>
       </div>
     </div>
 
@@ -683,11 +692,29 @@
         </div>
       </div>
     </div>
+    <!--Ad Section-->
 
-    <div class="footer" id="footer">
+    <div class="module" id="ad1">
+      <a href="https://affiliate.xp-pen.com/scripts/click.php?a_aid=xpisigmaart&a_bid=34d189b5" target="_blank">
+        <img src="https://resource.xp-pen.com/Uploads/images/20240131/gjdjSFdj2lly07WcxpT3.webp" alt="XP-Pen Image">
+      </a>
+    </div>
+
+    <div class="module" id="ad2">
+      <a href="https://miraboxbuy.com/" target="_blank">
+        <img src="https://i.ibb.co/4KY0j9K/mirabox-ad.png" alt="Mirabox">
+      </a>
+    </div>
+
+    <div class="module" id="ad3">
+      <a href="https://corel.sjv.io/c/5045742/1790597/20119" target="_blank">
+        <img src="https://i.ibb.co/qs1DFGJ/cenglish1.jpg" alt="XP-Pen Image">
+      </a>
+    </div>
+
+    <div class=" footer" id="footer">
       <h2></h2>
-      <p>Contact me for business inquiries (or if the site is broken) at <a
-          href="mailto:XPISigmaArt@gmail.com">XPISigmaArt@gmail.com</a></p>
+      <p>Contact me for business inquiries (or if the site is broken) at <a href="mailto:XPISigmaArt@gmail.com">XPISigmaArt@gmail.com</a></p>
       <div class="page-break"></div>
       <p>Artwork is protected under Copyright © and Creative Commons and may not be distributed or included in any AI
         sets without artist's permission or used in any merchandise/promotional material without artist consent.
@@ -701,7 +728,7 @@
   </section>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function() {
       const scrollIndicator = document.getElementById("scroll-indicator");
 
       function updateScrollIndicator() {
